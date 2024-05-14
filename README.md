@@ -1,5 +1,6 @@
 ## Note: Dependencies
 
+```bash
 node: v21.6.1
 cocoapods: 1.15.2
 XCode: Version 14.2 (14C18)
@@ -7,6 +8,7 @@ IOS_Simulator: IOS 16.0
 AndroidStudio: 2023.1.1 Patch 2
 Android_Emulator: Any devices
 OpenJDK: 17.0.9 (2023-10-17)
+```
 
 ## Step 1: Start the Metro Server
 
