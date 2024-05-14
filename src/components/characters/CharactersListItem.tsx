@@ -1,5 +1,5 @@
 import React from "react";
-import { TouchableOpacity, Text } from "react-native";
+import { TouchableOpacity, Text, Platform } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 import { setFavoriteToAsyncStorage } from "../../api/Api";
@@ -9,6 +9,8 @@ import {
   ScreensName,
   TCharacterDetailsScreenNavigatorType,
 } from "../../navigation";
+
+export const IS_ANDROID = Platform.OS === "android";
 
 interface IProps {
   item: ICharacter;
@@ -29,6 +31,8 @@ export const CharactersListItem = ({ item, getFavorites }: IProps) => {
   const isCharacterChosen =
     favoriteList.findIndex((el) => el.id === item.created) !== -1;
 
+  const chosenColorForAndroid = IS_ANDROID ? "pink" : "red";
+
   return (
     <TouchableOpacity
       style={styles.itemContainer}
@@ -40,7 +44,7 @@ export const CharactersListItem = ({ item, getFavorites }: IProps) => {
         hitSlop={10}
         style={{
           ...styles.choseBtn,
-          backgroundColor: isCharacterChosen ? "red" : "white",
+          backgroundColor: isCharacterChosen ? chosenColorForAndroid : "white",
         }}
         onPress={() => handleChoseCharacter(item)}
       >
