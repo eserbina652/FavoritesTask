@@ -9,7 +9,6 @@ import {
   useAppDispatch,
   useAppSelector,
 } from "../../store";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export const Home: React.FC = () => {
   const dispatch = useAppDispatch();

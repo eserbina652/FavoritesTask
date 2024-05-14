@@ -10,6 +10,16 @@ Android_Emulator: Any devices
 OpenJDK: 17.0.9 (2023-10-17)
 ```
 
+## Step 0: Install dependencies
+
+````bash
+# node modules
+npm i
+
+#CocoaPods
+npm run pods
+```
+
 ## Step 1: Start the Metro Server
 
 First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
@@ -22,7 +32,7 @@ npm start
 
 # OR using Yarn
 yarn start
-```
+````
 
 ## Step 2: Start your Application
 
